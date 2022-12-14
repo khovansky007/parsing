@@ -26,5 +26,5 @@ for x in range(10):
     result = cookies.get(url, headers=headers, data=data, allow_redirects=True)
     soup1 = BeautifulSoup(result.text, 'lxml')
     for i in soup1.find_all(class_='quote'):
-        with open('result.txt', 'a') as file:
+        with open('txt.txt', 'a') as file:
             file.write(i.find('span').text + '\n')
